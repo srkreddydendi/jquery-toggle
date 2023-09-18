@@ -1,0 +1,27 @@
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $('#test').html('&#9660;');
+      // $('#test em').css({ color: '#0c0' });
+      $('#test').click(() => {
+        const x = $('#test').text();
+        console.log(x);
+        debugger;
+        if (x == '▼') {
+          $('#test').html('&#9650;');
+        } else {
+          $('#test').html('&#9660;');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Test</h1>
+  <p id="test"></p>
+</body>
